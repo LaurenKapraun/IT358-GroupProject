@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IgV-vV-xex">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Companies List-->
+        <scene sceneID="Aqf-C3-dbQ">
+            <objects>
+                <tableViewController id="qB5-ra-dIB" userLabel="Companies List" customClass="CompanyList_TableViewController" customModule="Prospective_Job_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S31-Vv-lTu" userLabel="Company List Table">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Sh6-49-f0p">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="companyListItem" textLabel="BFa-dM-pg9" detailTextLabel="NLe-tc-nIK" style="IBUITableViewCellStyleSubtitle" id="sEa-z9-9Ba" userLabel="companyListItem">
+                                <rect key="frame" x="0.0" y="72" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sEa-z9-9Ba" id="Efz-zm-NvJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BFa-dM-pg9">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NLe-tc-nIK">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="AT0-rB-Gko" kind="show" id="pat-Oo-tTd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qB5-ra-dIB" id="4Ds-m6-RLO"/>
+                            <outlet property="delegate" destination="qB5-ra-dIB" id="j2y-Uf-Ucm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Companies" id="hyD-5G-0TH">
+                        <barButtonItem key="leftBarButtonItem" image="house.fill" catalog="system" id="XE4-5G-w8t">
+                            <connections>
+                                <segue destination="sLr-lU-jGu" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="gVV-mg-Xxl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDQ-JI-pX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="76"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="YBt-GT-yiu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="sLr-lU-jGu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpM-jT-apF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="62"/>
+        </scene>
+        <!--Company List Table View Controller-->
+        <scene sceneID="9Qm-es-9bN">
+            <objects>
+                <viewController id="AT0-rB-Gko" customClass="CompanyList_TableViewController" customModule="Prospective_Job_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jis-3e-Sdj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXm-eD-FAi">
+                                <rect key="frame" x="20" y="138" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIm-XW-0fT">
+                                <rect key="frame" x="20" y="181" width="374" height="23"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQk-Jv-qu9">
+                                <rect key="frame" x="20" y="254" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TF-16-wGX">
+                                <rect key="frame" x="20" y="297" width="374" height="23"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZr-Za-gng">
+                                <rect key="frame" x="20" y="370" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb2-pE-mQB">
+                                <rect key="frame" x="20" y="413" width="374" height="22.5"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDf-Zw-RwR">
+                                <rect key="frame" x="20" y="485.5" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Rating Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-zA-qaM">
+                                <rect key="frame" x="20" y="528.5" width="374" height="23"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="9w8-zA-qaM" secondAttribute="trailing" constant="20" id="2ux-Ma-lqX"/>
+                            <constraint firstItem="Nb2-pE-mQB" firstAttribute="top" secondItem="KZr-Za-gng" secondAttribute="bottom" constant="10" id="3Vu-Kx-YPi"/>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="Nb2-pE-mQB" secondAttribute="trailing" constant="20" id="4be-Zg-NsQ"/>
+                            <constraint firstItem="hXm-eD-FAi" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="7Rv-Y0-TXW"/>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="hXm-eD-FAi" secondAttribute="trailing" constant="20" id="9YB-Bn-aY1"/>
+                            <constraint firstItem="9w8-zA-qaM" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="EUf-2I-Yq9"/>
+                            <constraint firstItem="aDf-Zw-RwR" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="F4N-VK-3cC"/>
+                            <constraint firstItem="KZr-Za-gng" firstAttribute="top" secondItem="5TF-16-wGX" secondAttribute="bottom" constant="50" id="FWY-YG-Xli"/>
+                            <constraint firstItem="hXm-eD-FAi" firstAttribute="top" secondItem="bIm-et-Vg3" secondAttribute="top" constant="50" id="GKZ-fj-a6R"/>
+                            <constraint firstItem="UIm-XW-0fT" firstAttribute="top" secondItem="hXm-eD-FAi" secondAttribute="bottom" constant="10" id="KLj-RE-AJy"/>
+                            <constraint firstItem="5TF-16-wGX" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="WI9-7i-lSH"/>
+                            <constraint firstItem="hQk-Jv-qu9" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="WiL-TF-acD"/>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="aDf-Zw-RwR" secondAttribute="trailing" constant="20" id="Xss-PN-0LE"/>
+                            <constraint firstItem="9w8-zA-qaM" firstAttribute="top" secondItem="aDf-Zw-RwR" secondAttribute="bottom" constant="10" id="b3r-Eb-XMd"/>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="hQk-Jv-qu9" secondAttribute="trailing" constant="20" id="hZn-j2-viy"/>
+                            <constraint firstItem="Nb2-pE-mQB" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="jNk-Du-X6Q"/>
+                            <constraint firstItem="UIm-XW-0fT" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="jT3-fy-Iya"/>
+                            <constraint firstItem="5TF-16-wGX" firstAttribute="top" secondItem="hQk-Jv-qu9" secondAttribute="bottom" constant="10" id="kAn-Yg-KBY"/>
+                            <constraint firstItem="aDf-Zw-RwR" firstAttribute="top" secondItem="Nb2-pE-mQB" secondAttribute="bottom" constant="50" id="m8C-Aq-ini"/>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="KZr-Za-gng" secondAttribute="trailing" constant="20" id="nNm-ah-TjD"/>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="5TF-16-wGX" secondAttribute="trailing" constant="20" id="qaU-X1-796"/>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="UIm-XW-0fT" secondAttribute="trailing" constant="20" id="t8p-bR-elj"/>
+                            <constraint firstItem="KZr-Za-gng" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="tkX-fy-CnU"/>
+                            <constraint firstItem="hQk-Jv-qu9" firstAttribute="top" secondItem="UIm-XW-0fT" secondAttribute="bottom" constant="50" id="zSv-36-i2d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bIm-et-Vg3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M9p-JP-KOF"/>
+                    <connections>
+                        <outlet property="aboutLabel" destination="Nb2-pE-mQB" id="nfK-06-yQj"/>
+                        <outlet property="companyNameLabel" destination="UIm-XW-0fT" id="orB-W9-MTe"/>
+                        <outlet property="companyRatingLabel" destination="9w8-zA-qaM" id="Oe2-1F-zzd"/>
+                        <outlet property="locationLabel" destination="5TF-16-wGX" id="dA2-S8-bC5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLa-i0-iFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="93"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lQd-c7-nLD">
+            <objects>
+                <navigationController id="IgV-vV-xex" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XeI-e6-5xt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qB5-ra-dIB" kind="relationship" relationship="rootViewController" id="0b7-IC-azf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEQ-zO-Kga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-829" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+    </resources>
+</document>

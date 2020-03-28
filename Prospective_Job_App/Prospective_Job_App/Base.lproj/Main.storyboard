@@ -112,6 +112,9 @@
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="6Kv-zt-7Jv" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="7pG-z8-T9F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -136,13 +139,21 @@
             </objects>
             <point key="canvasLocation" x="250.72463768115944" y="160.71428571428569"/>
         </scene>
+        <!--CompanyList-->
+        <scene sceneID="M6b-bD-F7r">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CompanyList" id="6Kv-zt-7Jv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ol-hS-KM4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="194"/>
+        </scene>
         <!--JobsList-->
         <scene sceneID="TPh-qk-6Jq">
             <objects>
                 <viewControllerPlaceholder storyboardName="JobsList" id="4sY-Bk-emH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yR5-rl-96A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="145"/>
+            <point key="canvasLocation" x="913" y="127"/>
         </scene>
         <!--Salaries-->
         <scene sceneID="nnX-bc-nkf">
@@ -152,7 +163,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o18-ST-i2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="178"/>
+            <point key="canvasLocation" x="914" y="161"/>
         </scene>
     </scenes>
 </document>

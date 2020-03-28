@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="794" y="27"/>
         </scene>
-        <!--Jobs List Table View Controller-->
+        <!--Job Item Scene-->
         <scene sceneID="Rb3-cU-jmP">
             <objects>
-                <viewController id="YZ7-Qs-gKK" customClass="JobsList_TableViewController" customModule="Prospective_Job_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YZ7-Qs-gKK" userLabel="Job Item Scene" customClass="JobsList_TableViewController" customModule="Prospective_Job_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ytj-zN-xYQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,6 +197,14 @@
                         <viewLayoutGuide key="safeArea" id="ZZd-i2-MXY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rfy-Qx-lfi"/>
+                    <connections>
+                        <outlet property="companyLabel" destination="75i-9b-vTr" id="0sA-wI-eto"/>
+                        <outlet property="companyRatingLabel" destination="UV0-EZ-l0h" id="SEr-Ik-N3y"/>
+                        <outlet property="industryLabel" destination="gEO-uX-yaG" id="MBz-vx-JlP"/>
+                        <outlet property="jobDescriptionLabel" destination="UgU-fC-BpE" id="yJs-3g-LUS"/>
+                        <outlet property="jobTitle" destination="rZY-g3-7RE" id="Zif-iT-yje"/>
+                        <outlet property="salaryLabel" destination="RCO-hG-3R4" id="yho-Vx-wYB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXq-Ob-Mab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

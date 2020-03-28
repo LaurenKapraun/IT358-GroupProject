@@ -1,25 +1,22 @@
 //
-//  JobsList_TableViewController.swift
+//  CompanyList_TableViewController.swift
 //  Prospective_Job_App
 //
-//  Created by Lauren Kapraun on 3/27/20.
+//  Created by Lauren Kapraun on 3/28/20.
 //  Copyright © 2020 ilstu.edu. All rights reserved.
 //
 
 import UIKit
 
-class JobsList_TableViewController: UITableViewController {
+class CompanyList_TableViewController: UITableViewController {
     
-    // Labels from Job Item View Controller
-    @IBOutlet weak var jobTitle: UILabel!
-    @IBOutlet weak var companyLabel: UILabel!
-    @IBOutlet weak var jobDescriptionLabel: UILabel!
-    @IBOutlet weak var salaryLabel: UILabel!
+    // Labels from Company Item View Controller
+    @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var aboutLabel: UILabel!
     @IBOutlet weak var companyRatingLabel: UILabel!
-    @IBOutlet weak var industryLabel: UILabel!
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

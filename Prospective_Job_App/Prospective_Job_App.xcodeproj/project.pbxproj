@@ -19,6 +19,8 @@
 		FC980CAF242F04BD00EEA9B9 /* Salaries_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980CAE242F04BD00EEA9B9 /* Salaries_TableViewController.swift */; };
 		FC980CB1242F0E3200EEA9B9 /* JobsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC980CB0242F0E3200EEA9B9 /* JobsList.storyboard */; };
 		FC980CB3242F0FEC00EEA9B9 /* JobsList_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980CB2242F0FEC00EEA9B9 /* JobsList_TableViewController.swift */; };
+		FC980CB5242F148500EEA9B9 /* CompanyList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC980CB4242F148500EEA9B9 /* CompanyList.storyboard */; };
+		FC980CB7242F15D900EEA9B9 /* CompanyList_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980CB6242F15D900EEA9B9 /* CompanyList_TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		FC980CAE242F04BD00EEA9B9 /* Salaries_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salaries_TableViewController.swift; sourceTree = "<group>"; };
 		FC980CB0242F0E3200EEA9B9 /* JobsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsList.storyboard; sourceTree = "<group>"; };
 		FC980CB2242F0FEC00EEA9B9 /* JobsList_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsList_TableViewController.swift; sourceTree = "<group>"; };
+		FC980CB4242F148500EEA9B9 /* CompanyList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyList.storyboard; sourceTree = "<group>"; };
+		FC980CB6242F15D900EEA9B9 /* CompanyList_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList_TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				FC980CAE242F04BD00EEA9B9 /* Salaries_TableViewController.swift */,
 				FC980CB0242F0E3200EEA9B9 /* JobsList.storyboard */,
 				FC980CB2242F0FEC00EEA9B9 /* JobsList_TableViewController.swift */,
+				FC980CB4242F148500EEA9B9 /* CompanyList.storyboard */,
+				FC980CB6242F15D900EEA9B9 /* CompanyList_TableViewController.swift */,
 			);
 			path = Prospective_Job_App;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 			files = (
 				FC980C87242EC5F300EEA9B9 /* LaunchScreen.storyboard in Resources */,
 				FC980C84242EC5F300EEA9B9 /* Assets.xcassets in Resources */,
+				FC980CB5242F148500EEA9B9 /* CompanyList.storyboard in Resources */,
 				FC980CAD242F01E500EEA9B9 /* Salaries.storyboard in Resources */,
 				FC980C82242EC5EE00EEA9B9 /* Main.storyboard in Resources */,
 				FC980CB1242F0E3200EEA9B9 /* JobsList.storyboard in Resources */,
@@ -277,6 +284,7 @@
 				FC980CB3242F0FEC00EEA9B9 /* JobsList_TableViewController.swift in Sources */,
 				FC980C7F242EC5EE00EEA9B9 /* ViewController.swift in Sources */,
 				FC980C7B242EC5EE00EEA9B9 /* AppDelegate.swift in Sources */,
+				FC980CB7242F15D900EEA9B9 /* CompanyList_TableViewController.swift in Sources */,
 				FC980C7D242EC5EE00EEA9B9 /* SceneDelegate.swift in Sources */,
 				FC980CAF242F04BD00EEA9B9 /* Salaries_TableViewController.swift in Sources */,
 			);
