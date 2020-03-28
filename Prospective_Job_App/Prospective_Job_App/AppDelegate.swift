@@ -10,11 +10,27 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
 
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+        [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Navigation Changes
+        let navigationBarAppearace = UINavigationBar.appearance()
+        
+        // Change Navigation Background Color (Hex: 2AA4BF)
+        navigationBarAppearace.barTintColor = UIColor(red: 42.0/255.0, green: 164.0/255.0, blue: 191.0/255.0, alpha: 1.0)
+        
+        // Change Text Color to White
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        
+        // Change Navigation Font to Optima
+        let navigationTitleFont = UIFont(name: "Lao Sangam MN", size: 30)!
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.font: navigationTitleFont]
+   
         return true
     }
 
