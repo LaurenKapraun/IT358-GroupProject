@@ -53,6 +53,9 @@
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="4sY-Bk-emH" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="WEt-7W-wQu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wn7-Sg-xew" customClass="RoundButton" customModule="Prospective_Job_App" customModuleProvider="target">
                                 <rect key="frame" x="10" y="228" width="394" height="50"/>
@@ -79,6 +82,9 @@
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="FuW-Oc-eeT" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="zRb-IJ-Xwq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="CmP-Lo-P0f" customClass="RoundButton" customModule="Prospective_Job_App" customModuleProvider="target">
                                 <rect key="frame" x="10" y="328" width="394" height="50"/>
@@ -129,6 +135,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buy-KW-sEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="250.72463768115944" y="160.71428571428569"/>
+        </scene>
+        <!--JobsList-->
+        <scene sceneID="TPh-qk-6Jq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="JobsList" id="4sY-Bk-emH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yR5-rl-96A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="145"/>
+        </scene>
+        <!--Salaries-->
+        <scene sceneID="nnX-bc-nkf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Salaries" id="FuW-Oc-eeT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IHD-KL-2SC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o18-ST-i2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="178"/>
         </scene>
     </scenes>
 </document>
