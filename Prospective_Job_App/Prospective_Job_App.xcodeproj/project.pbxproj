@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4DB286244612D7005ED89E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB285244612D7005ED89E /* Company.swift */; };
+		1D4DB288244674C8005ED89E /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB287244674C8005ED89E /* Job.swift */; };
+		1D4DB28A244675E8005ED89E /* Salary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB289244675E8005ED89E /* Salary.swift */; };
+		1D4DB2902448B16E005ED89E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB28F2448B16E005ED89E /* APIRequest.swift */; };
+		1D4DB292244EF3A1005ED89E /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB291244EF3A1005ED89E /* Requests.swift */; };
 		FC980C7B242EC5EE00EEA9B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980C7A242EC5EE00EEA9B9 /* AppDelegate.swift */; };
 		FC980C7D242EC5EE00EEA9B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980C7C242EC5EE00EEA9B9 /* SceneDelegate.swift */; };
 		FC980C7F242EC5EE00EEA9B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980C7E242EC5EE00EEA9B9 /* ViewController.swift */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D4DB285244612D7005ED89E /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		1D4DB287244674C8005ED89E /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		1D4DB289244675E8005ED89E /* Salary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salary.swift; sourceTree = "<group>"; };
+		1D4DB28F2448B16E005ED89E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		1D4DB291244EF3A1005ED89E /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		FC980C77242EC5EE00EEA9B9 /* Prospective_Job_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prospective_Job_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC980C7A242EC5EE00EEA9B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC980C7C242EC5EE00EEA9B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +134,11 @@
 				FC980CB2242F0FEC00EEA9B9 /* JobsList_TableViewController.swift */,
 				FC980CB4242F148500EEA9B9 /* CompanyList.storyboard */,
 				FC980CB6242F15D900EEA9B9 /* CompanyList_TableViewController.swift */,
+				1D4DB285244612D7005ED89E /* Company.swift */,
+				1D4DB287244674C8005ED89E /* Job.swift */,
+				1D4DB289244675E8005ED89E /* Salary.swift */,
+				1D4DB28F2448B16E005ED89E /* APIRequest.swift */,
+				1D4DB291244EF3A1005ED89E /* Requests.swift */,
 			);
 			path = Prospective_Job_App;
 			sourceTree = "<group>";
@@ -283,10 +298,15 @@
 			files = (
 				FC980CB3242F0FEC00EEA9B9 /* JobsList_TableViewController.swift in Sources */,
 				FC980C7F242EC5EE00EEA9B9 /* ViewController.swift in Sources */,
+				1D4DB292244EF3A1005ED89E /* Requests.swift in Sources */,
 				FC980C7B242EC5EE00EEA9B9 /* AppDelegate.swift in Sources */,
 				FC980CB7242F15D900EEA9B9 /* CompanyList_TableViewController.swift in Sources */,
+				1D4DB28A244675E8005ED89E /* Salary.swift in Sources */,
+				1D4DB286244612D7005ED89E /* Company.swift in Sources */,
 				FC980C7D242EC5EE00EEA9B9 /* SceneDelegate.swift in Sources */,
 				FC980CAF242F04BD00EEA9B9 /* Salaries_TableViewController.swift in Sources */,
+				1D4DB2902448B16E005ED89E /* APIRequest.swift in Sources */,
+				1D4DB288244674C8005ED89E /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
