@@ -8,8 +8,10 @@
 
 import UIKit
 
-class CompanyList_TableViewController: UITableViewController {
+class CompanyList_TableViewController: UITableViewController, UISearchBarDelegate{
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searching = false
     // Labels from Company Item View Controller
     //proably better to put the detail view outlets on another controller
     //I can send an example of what I did for assignment 4
@@ -23,8 +25,11 @@ class CompanyList_TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
+        
         filteredCompanies = companies
         tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
@@ -49,6 +54,9 @@ class CompanyList_TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if searching {
+            return filteredCompanies?.count ?? 0
+        }
         return filteredCompanies?.count ?? companies.count
     }
 
@@ -106,4 +114,36 @@ class CompanyList_TableViewController: UITableViewController {
     }
     */
 
+    //SEARCH: - Searching
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            filteredCompanies = companies
+            searching = false
+            return
+        }
+        // filter method takes a closure and returns a result that satisfies the criteria
+        filteredCompanies = companies.filter { company in
+            return company.title.lowercased().contains(searchText.lowercased()) || company.subtitle.contains(searchText.lowercased())
+        }
+        let count = filteredCompanies?.count ?? 0
+        searching = count == 0 ? false : true
+        print("Companies: filtered \(count)")
+        tableView.reloadData()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searching = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searching = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+    }
 }
