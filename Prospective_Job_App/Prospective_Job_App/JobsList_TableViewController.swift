@@ -8,7 +8,10 @@
 
 import UIKit
 
-class JobsList_TableViewController: UITableViewController {
+class JobsList_TableViewController: UITableViewController, UISearchBarDelegate{
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searching = false
     
     // Labels from Job Item View Controller
     @IBOutlet weak var jobTitle: UILabel!
@@ -23,8 +26,10 @@ class JobsList_TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
         
         filteredJobs = jobs
         tableView.reloadData()
@@ -50,7 +55,10 @@ class JobsList_TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return filteredJobs?.count ?? 0
+        if searching {
+            return filteredJobs?.count ?? 0
+        }
+        return filteredJobs?.count ?? jobs.count
     }
 
     
@@ -107,4 +115,36 @@ class JobsList_TableViewController: UITableViewController {
     }
     */
 
+    //SEARCH: - Searching
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            filteredJobs = jobs
+            searching = false
+            return
+        }
+            // filter method takes a closure and returns a result that satisfies the criteria
+        filteredJobs = jobs.filter { job in
+            return job.title.lowercased().contains(searchText.lowercased()) || job.subtitle.contains(searchText.lowercased()) || job.company.title.lowercased().contains(searchText.lowercased())
+        }
+        let count = filteredJobs?.count ?? 0
+        searching = count == 0 ? false : true
+        print("Jobs: Filtered \(count)")
+        tableView.reloadData()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searching = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searching = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+    }
 }

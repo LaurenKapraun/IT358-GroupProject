@@ -8,15 +8,21 @@
 
 import UIKit
 
-class Salaries_TableViewController: UITableViewController {
+class Salaries_TableViewController: UITableViewController, UISearchBarDelegate{
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searching = false
 
     var salaries = [Salary]()
     var filteredSalaries: [Salary]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
+        
         filteredSalaries = salaries
         tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
@@ -41,6 +47,9 @@ class Salaries_TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if searching {
+            return filteredSalaries?.count ?? 0
+        }
         return filteredSalaries?.count ?? salaries.count
     }
 
@@ -98,4 +107,33 @@ class Salaries_TableViewController: UITableViewController {
     }
     */
 
+    //SEARCH: - Searching
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty, let _ = Double(searchText) else {
+            filteredSalaries = salaries
+            searching = false
+            return
+        }
+        filteredSalaries = salaries.filter {"\($0.average)".contains(searchText)}
+        let count = filteredSalaries?.count ?? 0
+        searching = count == 0 ? false : true
+        print("Salaries: Filtered \(count)")
+        tableView.reloadData()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searching = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searching = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+    }
 }
