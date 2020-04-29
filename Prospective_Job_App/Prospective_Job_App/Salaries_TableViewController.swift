@@ -25,6 +25,10 @@ class Salaries_TableViewController: UITableViewController, UISearchBarDelegate{
         
         filteredSalaries = salaries
         tableView.reloadData()
+        
+        let blsr = BLSRequest(method: "post", path: "timeseries/data")
+        blsr.series = ["LNS11000000"]
+        blsr.call()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,12 +45,10 @@ class Salaries_TableViewController: UITableViewController, UISearchBarDelegate{
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if searching {
             return filteredSalaries?.count ?? 0
         }

@@ -33,6 +33,14 @@ class JobsList_TableViewController: UITableViewController, UISearchBarDelegate{
         
         filteredJobs = jobs
         tableView.reloadData()
+        
+        let dolr = DOLRequest(method: "get", table: "accident")
+        dolr.query(key: "limit", val: "10")
+        dolr.query(key: "offset", val: "10")
+        print(dolr.url_str!)
+        dolr.call()
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
