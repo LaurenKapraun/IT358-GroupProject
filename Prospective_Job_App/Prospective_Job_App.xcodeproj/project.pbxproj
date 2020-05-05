@@ -12,6 +12,8 @@
 		1D4DB28A244675E8005ED89E /* Salary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB289244675E8005ED89E /* Salary.swift */; };
 		1D4DB2902448B16E005ED89E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB28F2448B16E005ED89E /* APIRequest.swift */; };
 		1D4DB292244EF3A1005ED89E /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB291244EF3A1005ED89E /* Requests.swift */; };
+		FC3DAFAD2461021000EFF049 /* TableViewController_Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC3DAFAB2461021000EFF049 /* TableViewController_Model.xcdatamodeld */; };
+		FC3DAFAF2461157B00EFF049 /* JobDesc_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DAFAE2461157B00EFF049 /* JobDesc_ViewController.swift */; };
 		FC980C7B242EC5EE00EEA9B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980C7A242EC5EE00EEA9B9 /* AppDelegate.swift */; };
 		FC980C7D242EC5EE00EEA9B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980C7C242EC5EE00EEA9B9 /* SceneDelegate.swift */; };
 		FC980C7F242EC5EE00EEA9B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC980C7E242EC5EE00EEA9B9 /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 		1D4DB289244675E8005ED89E /* Salary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salary.swift; sourceTree = "<group>"; };
 		1D4DB28F2448B16E005ED89E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		1D4DB291244EF3A1005ED89E /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		FC3DAFAC2461021000EFF049 /* TableViewController_Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TableViewController_Model.xcdatamodel; sourceTree = "<group>"; };
+		FC3DAFAE2461157B00EFF049 /* JobDesc_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDesc_ViewController.swift; sourceTree = "<group>"; };
 		FC980C77242EC5EE00EEA9B9 /* Prospective_Job_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prospective_Job_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC980C7A242EC5EE00EEA9B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC980C7C242EC5EE00EEA9B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				1D4DB289244675E8005ED89E /* Salary.swift */,
 				1D4DB28F2448B16E005ED89E /* APIRequest.swift */,
 				1D4DB291244EF3A1005ED89E /* Requests.swift */,
+				FC3DAFAB2461021000EFF049 /* TableViewController_Model.xcdatamodeld */,
+				FC3DAFAE2461157B00EFF049 /* JobDesc_ViewController.swift */,
 			);
 			path = Prospective_Job_App;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC980CB3242F0FEC00EEA9B9 /* JobsList_TableViewController.swift in Sources */,
+				FC3DAFAD2461021000EFF049 /* TableViewController_Model.xcdatamodeld in Sources */,
 				FC980C7F242EC5EE00EEA9B9 /* ViewController.swift in Sources */,
 				1D4DB292244EF3A1005ED89E /* Requests.swift in Sources */,
 				FC980C7B242EC5EE00EEA9B9 /* AppDelegate.swift in Sources */,
@@ -307,6 +314,7 @@
 				FC980CAF242F04BD00EEA9B9 /* Salaries_TableViewController.swift in Sources */,
 				1D4DB2902448B16E005ED89E /* APIRequest.swift in Sources */,
 				1D4DB288244674C8005ED89E /* Job.swift in Sources */,
+				FC3DAFAF2461157B00EFF049 /* JobDesc_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +647,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC3DAFAB2461021000EFF049 /* TableViewController_Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC3DAFAC2461021000EFF049 /* TableViewController_Model.xcdatamodel */,
+			);
+			currentVersion = FC3DAFAC2461021000EFF049 /* TableViewController_Model.xcdatamodel */;
+			path = TableViewController_Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FC980C6F242EC5EE00EEA9B9 /* Project object */;
 }
