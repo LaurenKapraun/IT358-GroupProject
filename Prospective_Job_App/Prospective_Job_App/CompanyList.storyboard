@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IgV-vV-xex">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IgV-vV-xex">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,14 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="Sh6-49-f0p">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="companyListItem" textLabel="BFa-dM-pg9" detailTextLabel="NLe-tc-nIK" style="IBUITableViewCellStyleSubtitle" id="sEa-z9-9Ba" userLabel="Company Cell" customClass="CompanyCell" customModule="Prospective_Job_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="55.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="companyCell" textLabel="BFa-dM-pg9" detailTextLabel="NLe-tc-nIK" style="IBUITableViewCellStyleSubtitle" id="sEa-z9-9Ba" userLabel="Company Cell" customClass="CompanyCell" customModule="Prospective_Job_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sEa-z9-9Ba" id="Efz-zm-NvJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
@@ -47,7 +42,7 @@
                                 <connections>
                                     <outlet property="subtitleLabel" destination="NLe-tc-nIK" id="wVC-AI-T7p"/>
                                     <outlet property="titleLabel" destination="BFa-dM-pg9" id="OYi-gc-N63"/>
-                                    <segue destination="AT0-rB-Gko" kind="show" id="pat-Oo-tTd"/>
+                                    <segue destination="AT0-rB-Gko" kind="show" identifier="CompanyDesc_ViewController" id="pat-Oo-tTd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,126 +51,131 @@
                             <outlet property="delegate" destination="qB5-ra-dIB" id="j2y-Uf-Ucm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Companies" id="hyD-5G-0TH">
-                        <barButtonItem key="leftBarButtonItem" image="house.fill" catalog="system" id="XE4-5G-w8t">
-                            <connections>
-                                <segue destination="sLr-lU-jGu" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="gVV-mg-Xxl"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchBar" destination="Sh6-49-f0p" id="Z0u-J1-LNX"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Companies" id="hyD-5G-0TH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDQ-JI-pX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="90" y="76"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="YBt-GT-yiu">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="sLr-lU-jGu" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NpM-jT-apF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="613" y="62"/>
-        </scene>
-        <!--Company List Table View Controller-->
+        <!--Company Desc View Controller-->
         <scene sceneID="9Qm-es-9bN">
             <objects>
-                <viewController id="AT0-rB-Gko" customClass="CompanyList_TableViewController" customModule="Prospective_Job_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompanyDesc_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AT0-rB-Gko" customClass="CompanyDesc_ViewController" customModule="Prospective_Job_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jis-3e-Sdj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXm-eD-FAi">
-                                <rect key="frame" x="20" y="138" width="374" height="33"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIm-XW-0fT">
-                                <rect key="frame" x="20" y="181" width="374" height="23"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQk-Jv-qu9">
-                                <rect key="frame" x="20" y="254" width="374" height="33"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TF-16-wGX">
-                                <rect key="frame" x="20" y="297" width="374" height="23"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZr-Za-gng">
-                                <rect key="frame" x="20" y="370" width="374" height="33"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb2-pE-mQB">
-                                <rect key="frame" x="20" y="413" width="374" height="22.5"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDf-Zw-RwR">
-                                <rect key="frame" x="20" y="485.5" width="374" height="33"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Rating Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-zA-qaM">
-                                <rect key="frame" x="20" y="528.5" width="374" height="23"/>
-                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYg-bN-yWi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9h9-yC-kNa">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXm-eD-FAi">
+                                                <rect key="frame" x="50" y="50" width="102.5" height="33"/>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIm-XW-0fT">
+                                                <rect key="frame" x="50" y="93" width="113" height="23"/>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQk-Jv-qu9">
+                                                <rect key="frame" x="50" y="166" width="92" height="33"/>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TF-16-wGX">
+                                                <rect key="frame" x="50" y="209" width="106" height="23"/>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZr-Za-gng">
+                                                <rect key="frame" x="50" y="282" width="65.5" height="33"/>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb2-pE-mQB">
+                                                <rect key="frame" x="50" y="325" width="314" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Rating Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-zA-qaM">
+                                                <rect key="frame" x="50" y="440.5" width="164.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDf-Zw-RwR">
+                                                <rect key="frame" x="50" y="397.5" width="177.5" height="33"/>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Nb2-pE-mQB" secondAttribute="trailing" constant="50" id="3ra-eF-Z7C"/>
+                                            <constraint firstItem="KZr-Za-gng" firstAttribute="leading" secondItem="9h9-yC-kNa" secondAttribute="leading" constant="50" id="DXq-bd-Ftt"/>
+                                            <constraint firstItem="hQk-Jv-qu9" firstAttribute="leading" secondItem="9h9-yC-kNa" secondAttribute="leading" constant="50" id="GAg-UE-ZK3"/>
+                                            <constraint firstItem="UIm-XW-0fT" firstAttribute="top" secondItem="hXm-eD-FAi" secondAttribute="bottom" constant="10" id="Hby-q2-rT8"/>
+                                            <constraint firstItem="aDf-Zw-RwR" firstAttribute="leading" secondItem="9h9-yC-kNa" secondAttribute="leading" constant="50" id="R0l-IO-PGA"/>
+                                            <constraint firstItem="Nb2-pE-mQB" firstAttribute="top" secondItem="KZr-Za-gng" secondAttribute="bottom" constant="10" id="RNI-uP-5g1"/>
+                                            <constraint firstItem="aDf-Zw-RwR" firstAttribute="top" secondItem="Nb2-pE-mQB" secondAttribute="bottom" constant="50" id="Ybz-6q-Mad"/>
+                                            <constraint firstItem="9w8-zA-qaM" firstAttribute="top" secondItem="aDf-Zw-RwR" secondAttribute="bottom" constant="10" id="Yv7-VU-Op4"/>
+                                            <constraint firstItem="KZr-Za-gng" firstAttribute="top" secondItem="5TF-16-wGX" secondAttribute="bottom" constant="50" id="ZGp-MI-M9O"/>
+                                            <constraint firstItem="9w8-zA-qaM" firstAttribute="leading" secondItem="9h9-yC-kNa" secondAttribute="leading" constant="50" id="ZPZ-Xd-Zcm"/>
+                                            <constraint firstItem="hQk-Jv-qu9" firstAttribute="top" secondItem="UIm-XW-0fT" secondAttribute="bottom" constant="50" id="aqC-Gn-CQa"/>
+                                            <constraint firstItem="hXm-eD-FAi" firstAttribute="top" secondItem="9h9-yC-kNa" secondAttribute="top" constant="50" id="bSl-d3-jw4"/>
+                                            <constraint firstItem="Nb2-pE-mQB" firstAttribute="leading" secondItem="9h9-yC-kNa" secondAttribute="leading" constant="50" id="dhb-lN-jLx"/>
+                                            <constraint firstItem="hXm-eD-FAi" firstAttribute="leading" secondItem="9h9-yC-kNa" secondAttribute="leading" constant="50" id="l9S-zy-don"/>
+                                            <constraint firstItem="5TF-16-wGX" firstAttribute="leading" secondItem="9h9-yC-kNa" secondAttribute="leading" constant="50" id="ml9-eM-9Mf"/>
+                                            <constraint firstItem="5TF-16-wGX" firstAttribute="top" secondItem="hQk-Jv-qu9" secondAttribute="bottom" constant="10" id="nol-AG-PWw"/>
+                                            <constraint firstAttribute="bottom" secondItem="9w8-zA-qaM" secondAttribute="bottom" constant="344.5" id="vqH-9j-vry"/>
+                                            <constraint firstItem="UIm-XW-0fT" firstAttribute="leading" secondItem="9h9-yC-kNa" secondAttribute="leading" constant="50" id="vuv-Si-Qqm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9h9-yC-kNa" secondAttribute="trailing" id="2kR-kX-mYu"/>
+                                    <constraint firstAttribute="bottom" secondItem="9h9-yC-kNa" secondAttribute="bottom" id="Hx3-ox-JUq"/>
+                                    <constraint firstItem="9h9-yC-kNa" firstAttribute="centerX" secondItem="YYg-bN-yWi" secondAttribute="centerX" id="bMe-2R-lc3"/>
+                                    <constraint firstItem="9h9-yC-kNa" firstAttribute="leading" secondItem="YYg-bN-yWi" secondAttribute="leading" id="frr-Ck-pM6"/>
+                                    <constraint firstItem="9h9-yC-kNa" firstAttribute="height" secondItem="YYg-bN-yWi" secondAttribute="height" priority="250" id="tcI-Sk-CZD"/>
+                                    <constraint firstItem="9h9-yC-kNa" firstAttribute="top" secondItem="ehY-8n-8Mo" secondAttribute="top" id="ugQ-hR-UCr"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ehY-8n-8Mo"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="3JL-wf-qi4"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="9w8-zA-qaM" secondAttribute="trailing" constant="20" id="2ux-Ma-lqX"/>
-                            <constraint firstItem="Nb2-pE-mQB" firstAttribute="top" secondItem="KZr-Za-gng" secondAttribute="bottom" constant="10" id="3Vu-Kx-YPi"/>
-                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="Nb2-pE-mQB" secondAttribute="trailing" constant="20" id="4be-Zg-NsQ"/>
-                            <constraint firstItem="hXm-eD-FAi" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="7Rv-Y0-TXW"/>
-                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="hXm-eD-FAi" secondAttribute="trailing" constant="20" id="9YB-Bn-aY1"/>
-                            <constraint firstItem="9w8-zA-qaM" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="EUf-2I-Yq9"/>
-                            <constraint firstItem="aDf-Zw-RwR" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="F4N-VK-3cC"/>
-                            <constraint firstItem="KZr-Za-gng" firstAttribute="top" secondItem="5TF-16-wGX" secondAttribute="bottom" constant="50" id="FWY-YG-Xli"/>
-                            <constraint firstItem="hXm-eD-FAi" firstAttribute="top" secondItem="bIm-et-Vg3" secondAttribute="top" constant="50" id="GKZ-fj-a6R"/>
-                            <constraint firstItem="UIm-XW-0fT" firstAttribute="top" secondItem="hXm-eD-FAi" secondAttribute="bottom" constant="10" id="KLj-RE-AJy"/>
-                            <constraint firstItem="5TF-16-wGX" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="WI9-7i-lSH"/>
-                            <constraint firstItem="hQk-Jv-qu9" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="WiL-TF-acD"/>
-                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="aDf-Zw-RwR" secondAttribute="trailing" constant="20" id="Xss-PN-0LE"/>
-                            <constraint firstItem="9w8-zA-qaM" firstAttribute="top" secondItem="aDf-Zw-RwR" secondAttribute="bottom" constant="10" id="b3r-Eb-XMd"/>
-                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="hQk-Jv-qu9" secondAttribute="trailing" constant="20" id="hZn-j2-viy"/>
-                            <constraint firstItem="Nb2-pE-mQB" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="jNk-Du-X6Q"/>
-                            <constraint firstItem="UIm-XW-0fT" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="jT3-fy-Iya"/>
-                            <constraint firstItem="5TF-16-wGX" firstAttribute="top" secondItem="hQk-Jv-qu9" secondAttribute="bottom" constant="10" id="kAn-Yg-KBY"/>
-                            <constraint firstItem="aDf-Zw-RwR" firstAttribute="top" secondItem="Nb2-pE-mQB" secondAttribute="bottom" constant="50" id="m8C-Aq-ini"/>
-                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="KZr-Za-gng" secondAttribute="trailing" constant="20" id="nNm-ah-TjD"/>
-                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="5TF-16-wGX" secondAttribute="trailing" constant="20" id="qaU-X1-796"/>
-                            <constraint firstItem="bIm-et-Vg3" firstAttribute="trailing" secondItem="UIm-XW-0fT" secondAttribute="trailing" constant="20" id="t8p-bR-elj"/>
-                            <constraint firstItem="KZr-Za-gng" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" constant="20" id="tkX-fy-CnU"/>
-                            <constraint firstItem="hQk-Jv-qu9" firstAttribute="top" secondItem="UIm-XW-0fT" secondAttribute="bottom" constant="50" id="zSv-36-i2d"/>
+                            <constraint firstItem="YYg-bN-yWi" firstAttribute="leading" secondItem="bIm-et-Vg3" secondAttribute="leading" id="Ego-nM-0uv"/>
+                            <constraint firstItem="YYg-bN-yWi" firstAttribute="top" secondItem="bIm-et-Vg3" secondAttribute="top" id="JNP-ow-g1m"/>
+                            <constraint firstItem="YYg-bN-yWi" firstAttribute="centerX" secondItem="Jis-3e-Sdj" secondAttribute="centerX" id="NhP-DJ-dOt"/>
+                            <constraint firstItem="bIm-et-Vg3" firstAttribute="bottom" secondItem="YYg-bN-yWi" secondAttribute="bottom" constant="70" id="oIV-Ej-P99"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bIm-et-Vg3"/>
                     </view>
                     <navigationItem key="navigationItem" id="M9p-JP-KOF"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
-                        <outlet property="aboutLabel" destination="Nb2-pE-mQB" id="nfK-06-yQj"/>
-                        <outlet property="companyNameLabel" destination="UIm-XW-0fT" id="orB-W9-MTe"/>
-                        <outlet property="companyRatingLabel" destination="9w8-zA-qaM" id="Oe2-1F-zzd"/>
-                        <outlet property="locationLabel" destination="5TF-16-wGX" id="dA2-S8-bC5"/>
+                        <outlet property="companyAbout" destination="Nb2-pE-mQB" id="52X-75-Zcp"/>
+                        <outlet property="companyLocation" destination="5TF-16-wGX" id="cIZ-Km-mQb"/>
+                        <outlet property="companyName" destination="UIm-XW-0fT" id="cJs-9z-1aP"/>
+                        <outlet property="companyRating" destination="9w8-zA-qaM" id="6xX-K5-ePZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLa-i0-iFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061" y="93"/>
+            <point key="canvasLocation" x="1060.8695652173915" y="92.410714285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lQd-c7-nLD">
@@ -194,7 +194,4 @@
             <point key="canvasLocation" x="-829" y="76"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
-    </resources>
 </document>

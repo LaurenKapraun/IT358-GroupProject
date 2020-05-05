@@ -2,9 +2,9 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Companies" representedClassName="Companies" syncable="YES" codeGenerationType="class">
         <attribute name="aboutCompany" optional="YES" attributeType="String"/>
-        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="String"/>
-        <attribute name="rating" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Jobs" representedClassName="Jobs" syncable="YES" codeGenerationType="class">
         <attribute name="companyName" optional="YES" attributeType="String"/>
@@ -15,6 +15,6 @@
     </entity>
     <elements>
         <element name="Jobs" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="Companies" positionX="-54" positionY="0" width="128" height="28"/>
+        <element name="Companies" positionX="115.56640625" positionY="-14.52734375" width="128" height="103"/>
     </elements>
 </model>
