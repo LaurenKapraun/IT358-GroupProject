@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hgQ-ll-96k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hgQ-ll-96k">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="F4g-f8-YmS">
             <objects>
-                <viewController id="hgQ-ll-96k" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hgQ-ll-96k" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NIX-x8-KNz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="4sY-Bk-emH" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="WEt-7W-wQu"/>
+                                    <segue destination="4sY-Bk-emH" kind="show" id="WEt-7W-wQu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wn7-Sg-xew" customClass="RoundButton" customModule="Prospective_Job_App" customModuleProvider="target">
@@ -150,7 +150,9 @@
         <!--JobsList-->
         <scene sceneID="TPh-qk-6Jq">
             <objects>
-                <viewControllerPlaceholder storyboardName="JobsList" id="4sY-Bk-emH" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="JobsList" id="4sY-Bk-emH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5cY-kF-nwP"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yR5-rl-96A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="127"/>
