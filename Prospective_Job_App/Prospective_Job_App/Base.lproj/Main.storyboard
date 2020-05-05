@@ -113,7 +113,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="6Kv-zt-7Jv" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="7pG-z8-T9F"/>
+                                    <segue destination="6Kv-zt-7Jv" kind="show" id="7pG-z8-T9F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,7 +142,9 @@
         <!--CompanyList-->
         <scene sceneID="M6b-bD-F7r">
             <objects>
-                <viewControllerPlaceholder storyboardName="CompanyList" id="6Kv-zt-7Jv" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="CompanyList" id="6Kv-zt-7Jv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="afq-4R-DoA"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ol-hS-KM4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="943" y="194"/>

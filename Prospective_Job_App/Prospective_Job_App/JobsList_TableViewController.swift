@@ -73,10 +73,6 @@ class JobsList_TableViewController: UITableViewController {
         }
     }
     
-    @IBAction func returnHome(_ sender: Any) {
-        self.performSegue(withIdentifier: "homePage", sender: nil)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPaths=self.tableView!.indexPathsForSelectedRows!
         let indexPath = indexPaths[0] as NSIndexPath
