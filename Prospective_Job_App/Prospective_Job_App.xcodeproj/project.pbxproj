@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D12915A2463319A00B78F2D /* BureauOfLaborStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1291592463319A00B78F2D /* BureauOfLaborStatistics.swift */; };
+		1D12915C246331C900B78F2D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D12915B246331C900B78F2D /* Extensions.swift */; };
+		1D12915E246333BE00B78F2D /* Turnover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D12915D246333BE00B78F2D /* Turnover.storyboard */; };
+		1D1291602463371200B78F2D /* TurnoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D12915F2463371200B78F2D /* TurnoverTableViewController.swift */; };
 		1D4DB286244612D7005ED89E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB285244612D7005ED89E /* Company.swift */; };
 		1D4DB288244674C8005ED89E /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB287244674C8005ED89E /* Job.swift */; };
 		1D4DB28A244675E8005ED89E /* Salary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB289244675E8005ED89E /* Salary.swift */; };
 		1D4DB2902448B16E005ED89E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB28F2448B16E005ED89E /* APIRequest.swift */; };
 		1D4DB292244EF3A1005ED89E /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DB291244EF3A1005ED89E /* Requests.swift */; };
+		1D5AA33A246394AE007935C8 /* TurnoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA339246394AE007935C8 /* TurnoverCell.swift */; };
 		FC3DAFAD2461021000EFF049 /* TableViewController_Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC3DAFAB2461021000EFF049 /* TableViewController_Model.xcdatamodeld */; };
 		FC3DAFAF2461157B00EFF049 /* JobDesc_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DAFAE2461157B00EFF049 /* JobDesc_ViewController.swift */; };
 		FC3DAFB1246136E300EFF049 /* CompanyDesc_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DAFB0246136E300EFF049 /* CompanyDesc_ViewController.swift */; };
@@ -49,11 +54,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D1291592463319A00B78F2D /* BureauOfLaborStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauOfLaborStatistics.swift; sourceTree = "<group>"; };
+		1D12915B246331C900B78F2D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1D12915D246333BE00B78F2D /* Turnover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Turnover.storyboard; sourceTree = "<group>"; };
+		1D12915F2463371200B78F2D /* TurnoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnoverTableViewController.swift; sourceTree = "<group>"; };
 		1D4DB285244612D7005ED89E /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		1D4DB287244674C8005ED89E /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		1D4DB289244675E8005ED89E /* Salary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salary.swift; sourceTree = "<group>"; };
 		1D4DB28F2448B16E005ED89E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		1D4DB291244EF3A1005ED89E /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		1D5AA339246394AE007935C8 /* TurnoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnoverCell.swift; sourceTree = "<group>"; };
 		FC3DAFAC2461021000EFF049 /* TableViewController_Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TableViewController_Model.xcdatamodel; sourceTree = "<group>"; };
 		FC3DAFAE2461157B00EFF049 /* JobDesc_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDesc_ViewController.swift; sourceTree = "<group>"; };
 		FC3DAFB0246136E300EFF049 /* CompanyDesc_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDesc_ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +158,11 @@
 				FC3DAFAB2461021000EFF049 /* TableViewController_Model.xcdatamodeld */,
 				FC3DAFAE2461157B00EFF049 /* JobDesc_ViewController.swift */,
 				FC3DAFB0246136E300EFF049 /* CompanyDesc_ViewController.swift */,
+				1D1291592463319A00B78F2D /* BureauOfLaborStatistics.swift */,
+				1D12915B246331C900B78F2D /* Extensions.swift */,
+				1D12915D246333BE00B78F2D /* Turnover.storyboard */,
+				1D12915F2463371200B78F2D /* TurnoverTableViewController.swift */,
+				1D5AA339246394AE007935C8 /* TurnoverCell.swift */,
 			);
 			path = Prospective_Job_App;
 			sourceTree = "<group>";
@@ -276,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC980C87242EC5F300EEA9B9 /* LaunchScreen.storyboard in Resources */,
+				1D12915E246333BE00B78F2D /* Turnover.storyboard in Resources */,
 				FC980C84242EC5F300EEA9B9 /* Assets.xcassets in Resources */,
 				FC980CB5242F148500EEA9B9 /* CompanyList.storyboard in Resources */,
 				FC980CAD242F01E500EEA9B9 /* Salaries.storyboard in Resources */,
@@ -307,14 +323,18 @@
 			files = (
 				FC980CB3242F0FEC00EEA9B9 /* JobsList_TableViewController.swift in Sources */,
 				FC3DAFAD2461021000EFF049 /* TableViewController_Model.xcdatamodeld in Sources */,
+				1D12915A2463319A00B78F2D /* BureauOfLaborStatistics.swift in Sources */,
 				FC980C7F242EC5EE00EEA9B9 /* ViewController.swift in Sources */,
 				1D4DB292244EF3A1005ED89E /* Requests.swift in Sources */,
 				FC980C7B242EC5EE00EEA9B9 /* AppDelegate.swift in Sources */,
 				FC980CB7242F15D900EEA9B9 /* CompanyList_TableViewController.swift in Sources */,
+				1D1291602463371200B78F2D /* TurnoverTableViewController.swift in Sources */,
 				FC3DAFB1246136E300EFF049 /* CompanyDesc_ViewController.swift in Sources */,
 				1D4DB28A244675E8005ED89E /* Salary.swift in Sources */,
 				1D4DB286244612D7005ED89E /* Company.swift in Sources */,
 				FC980C7D242EC5EE00EEA9B9 /* SceneDelegate.swift in Sources */,
+				1D5AA33A246394AE007935C8 /* TurnoverCell.swift in Sources */,
+				1D12915C246331C900B78F2D /* Extensions.swift in Sources */,
 				FC980CAF242F04BD00EEA9B9 /* Salaries_TableViewController.swift in Sources */,
 				1D4DB2902448B16E005ED89E /* APIRequest.swift in Sources */,
 				1D4DB288244674C8005ED89E /* Job.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Salaries_TableViewController: UITableViewController, UISearchBarDelegate{
+class Salaries_TableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var searching = false
@@ -26,9 +26,9 @@ class Salaries_TableViewController: UITableViewController, UISearchBarDelegate{
         filteredSalaries = salaries
         tableView.reloadData()
         
-        let blsr = BLSRequest(method: "post", path: "timeseries/data")
-        blsr.series = ["LNS11000000"]
-        blsr.call()
+        //let blsr = BLSRequest(method: "post", path: "timeseries/data")
+        //blsr.series = ["LNS11000000"]
+        //blsr.call()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -12,8 +12,8 @@ protocol Tasker {
     func urlString() -> String
     func queryString() -> String
     func bodyData() -> Data?
-    func handlerFunc(_ data: Data, _ response: URLResponse?, _ error: Error?) -> Void
-    func packRequest() -> NSMutableURLRequest?
+    //func handlerFunc(_ data: Data, _ response: URLResponse?, _ error: Error?) -> Void
+    //func packRequest() -> NSMutableURLRequest?
 }
 
 class CustomRequest: NSObject, URLSessionDelegate, Tasker {
@@ -57,11 +57,12 @@ class CustomRequest: NSObject, URLSessionDelegate, Tasker {
         timeout = 60.0
     }
     
-    func call(){
-        guard let request = packRequest() else { return }
+    func call(handler: @escaping (Data?, URLResponse?, Error?) -> Void){
+        guard let request = request else { return }
         //create and send task
         let task = session.dataTask(with: request as URLRequest,
-            completionHandler: { data, response, error in
+                                    completionHandler: handler
+            /*completionHandler: { data, response, error in
                 guard error == nil else {
                     print("error calling GET method")
                     print(error!)
@@ -72,12 +73,12 @@ class CustomRequest: NSObject, URLSessionDelegate, Tasker {
                     return
                 }
                 self.handlerFunc(respData, response, error)
-            }
+            }*/
+    
         )
         task.resume()
     }
-    
-    func packRequest() -> NSMutableURLRequest?{
+    var request: NSMutableURLRequest? {
         guard let url = url else {  return nil  }
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = method.uppercased()
@@ -89,6 +90,19 @@ class CustomRequest: NSObject, URLSessionDelegate, Tasker {
         }
         return request
     }
+    
+    /*func packRequest() -> NSMutableURLRequest?{
+        guard let url = url else {  return nil  }
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = method.uppercased()
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+        if method != "GET" {
+            request.httpBody = bodyData()
+        }
+        return request
+    }*/
     
     func urlString() -> String {
         return host + "/" + path + "/" + queryString()
@@ -102,7 +116,7 @@ class CustomRequest: NSObject, URLSessionDelegate, Tasker {
         return nil
     }
     
-    func handlerFunc(_ data: Data, _ response: URLResponse?, _ error: Error?) {
+    /*func handlerFunc(_ data: Data, _ response: URLResponse?, _ error: Error?) {
         return
-    }
+    }*/
 }
